@@ -1,0 +1,50 @@
+@media (orientation: portrait) {
+    body{
+        font-size: 5vw;
+        font-family: sans-serif;
+    }
+}
+
+@media (orientation: landscape) {
+    body{
+        font-size: 3vw;
+        font-family: sans-serif;
+    }
+}
+
+.box{
+    border: 0.3em gray solid;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0.5em;
+}
+
+.big_btn{
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.small_btn{
+    font-size: 1em;
+    border-radius: 0.5em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.prev{
+    margin-top: 1em;
+    width: 100%;
+    min-height: 5em;
+    background-color: lightgray;
+}
+
+input[type="file"],input[type="number"],select{
+    font-size: 1em;
+    width: 10em;
+}
+
+input[type="checkbox"]{
+    inline-size: 3em;
+    block-size: 3em;
+    margin: 0.5em;
+}

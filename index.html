@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Striper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Striper</h1>
+    <p>X等の4kで読み込むと見える画像を生成・復元できます。</p>
+    <div class="box">
+        <h3>元画像</h3>
+        <!-- <input type="file" id="org_file" accept="image/*"/> -->
+        <canvas id="org_prev" class="prev"></canvas>
+        <!-- <span>フォーマット:<br>
+        <select id="cond">
+            <option selected value="png24">PNG-24</option>
+            <option value="png8">PNG-8</option>
+            <option value="jpeg">JPEG(95%)</option>
+        </select></span>
+        <button class="small_btn" id="org_show_trg">別ページで画像を表示</button> -->
+    </div>
+    <div class="box">
+        <div class="box">
+            <h3>オプション</h3>
+            <span>マスク幅:<br><input type="number" value="1" id="mask_w">px</span><br>
+            <span>画像幅:<br><input type="number" value="1" id="img_w">px</span><br>
+            <span>位相:<br><input type="number" value="0" id="offset">px</span><br>
+            <span>ホワイトバランス調整:<input type="checkbox" id="balance"></span><br>
+            <span>方向:<br>
+            <select id="dir">
+                <option selected value="V">横縞</option>
+                <option value="H">縦縞</option>
+            </select></span><br>
+            <span>方法:<br>
+            <select id="method">
+                <option selected value="B">バイリニア変換</option>
+                <option value="N">ネガポジ反転</option>
+            </select></span>
+
+        </div>
+        <button id="gen_trg" class="big_btn" disabled>↓生成</button>
+        <button id="rest_trg" class="big_btn">復元↑</button>
+    </div>
+    <div class="box">
+        <h3>4k画像</h3>
+        <input type="file" id="trg_file" accept="image/*"/>
+        <canvas id="trg_prev" class="prev"></canvas>
+        <!-- <span>フォーマット:<br>
+        <select id="cond">
+            <option selected value="png24">PNG-24</option>
+            <option value="png8">PNG-8</option>
+            <option value="jpeg">JPEG(95%)</option>
+        </select></span>
+        <button class="small_btn" id="trg_show_trg">別ページで画像を表示</button> -->
+    </div>
+    <script src="canvas-plus.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
