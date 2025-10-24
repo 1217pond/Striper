@@ -1,21 +1,21 @@
-document.getElementById("org_file").addEventListener("change",(e)=>{
-    file = e.target.files[0];
-    const reader = new FileReader();
+// document.getElementById("org_file").addEventListener("change",(e)=>{
+//     file = e.target.files[0];
+//     const reader = new FileReader();
 
-    reader.onload = (e) => {
-        const img_elm = document.createElement("img");
-        img_elm.onload = () => {
-            const cvs = document.getElementById("org_prev");
-            cvs.width = img_elm.width;
-            cvs.height = img_elm.height;
-            const ctx = cvs.getContext("2d");
-            ctx.drawImage(img_elm,0,0);
-        };
-        img_elm.src = e.target.result;
-    };
+//     reader.onload = (e) => {
+//         const img_elm = document.createElement("img");
+//         img_elm.onload = () => {
+//             const cvs = document.getElementById("org_prev");
+//             cvs.width = img_elm.width;
+//             cvs.height = img_elm.height;
+//             const ctx = cvs.getContext("2d");
+//             ctx.drawImage(img_elm,0,0);
+//         };
+//         img_elm.src = e.target.result;
+//     };
 
-    reader.readAsDataURL(file);
-});
+//     reader.readAsDataURL(file);
+// });
 
 document.getElementById("trg_file").addEventListener("change",(e)=>{
     file = e.target.files[0];
@@ -188,4 +188,5 @@ document.getElementById("rest_trg").addEventListener("click",(e)=>{
         console.log("success");
         org_ctx.putImageData(org_im_data, 0, 0);
     }
+
 });
